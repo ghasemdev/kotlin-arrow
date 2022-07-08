@@ -1,0 +1,131 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "kind": "notApplicable",
+          "level": "none",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src\\main\\kotlin\\core\\datatypes\\monoid\\monoid.kt"
+                },
+                "region": {
+                  "startColumn": 5,
+                  "startLine": 10
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "unsupported expression (KotlinObjectLiteralExpression)"
+          },
+          "ruleId": "arrow.analysis.UnsupportedExpression"
+        },
+        {
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src\\main\\kotlin\\core\\totorials\\monad\\normal.kt"
+                },
+                "region": {
+                  "startColumn": 28,
+                  "startLine": 4
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "unreachable code due to post-conditions: false\n  -> main function body"
+          },
+          "ruleId": "arrow.analysis.InconsistentCallPost"
+        },
+        {
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src\\main\\kotlin\\core\\totorials\\monad\\normal.kt"
+                },
+                "region": {
+                  "startColumn": 39,
+                  "startLine": 8
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "unreachable code due to post-conditions: false\n  -> main function body"
+          },
+          "ruleId": "arrow.analysis.InconsistentCallPost"
+        },
+        {
+          "kind": "fail",
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src\\main\\kotlin\\core\\totorials\\monad\\normal.kt"
+                },
+                "region": {
+                  "startColumn": 27,
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "unreachable code due to post-conditions: false\n  -> main function body"
+          },
+          "ruleId": "arrow.analysis.InconsistentCallPost"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "downloadUri": "https://arrow-kt.io/docs/meta/analysis/",
+          "fullName": "Arrow Analysis",
+          "informationUri": "https://arrow-kt.io/docs/meta/analysis/",
+          "language": "en",
+          "name": "Arrow Analysis",
+          "organization": "arrow-kt",
+          "rules": [
+            {
+              "fullDescription": {
+                "text": "This element is not (yet) supported"
+              },
+              "helpUri": "https://arrow-kt.io/docs/meta/analysis/UnsupportedExpression.html",
+              "id": "arrow.analysis.UnsupportedExpression",
+              "name": "UnsupportedExpression",
+              "shortDescription": {
+                "text": "This element is not (yet) supported"
+              }
+            },
+            {
+              "fullDescription": {
+                "markdown": "The post-conditions gathered after calling a function imply\nthat this function could not be called at all. \n_This is really uncommon in practice_.",
+                "text": "The post-conditions gathered after calling a function imply\nthat this function could not be called at all. \n_This is really uncommon in practice_."
+              },
+              "helpUri": "https://arrow-kt.io/docs/meta/analysis/InconsistentCallPost.html",
+              "id": "arrow.analysis.InconsistentCallPost",
+              "name": "InconsistentCallPost",
+              "shortDescription": {
+                "text": "Inconsistent set of conditions (usually means unreachable code)"
+              }
+            }
+          ],
+          "semanticVersion": "1.0.0",
+          "version": "1.0.0"
+        }
+      }
+    }
+  ]
+}
